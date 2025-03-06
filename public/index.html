@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <title>Rapido_Chat</title> -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="logo.png">
+
+    <!-- ---website meta tag--- -->
+    <title>RapidoChat - Fast & Secure Online Chatting</title>
+    <meta name="description" content="RapidoChat is the fastest and most secure chat platform. Instantly connect, chat, and make new friends online. No registration required!">
+    <meta name="keywords" content="RapidoChat, online chat, instant messaging, chat with friends, secure chat, fast chatting, free chat">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="RapidoChat Team">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="RapidoChat - Fast & Secure Online Chatting">
+    <meta property="og:description" content="Join RapidoChat for an instant and secure chatting experience. Connect with people worldwide, anytime!">
+    <meta property="og:image" content="https://yourwebsite.com/logo.png">
+    <meta property="og:url" content="https://www.rapidochat.com">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="RapidoChat - Fast & Secure Online Chatting">
+    <meta name="twitter:description" content="Chat instantly with friends & new people. Secure, fast, and fun!">
+    <meta name="twitter:image" content="https://yourwebsite.com/logo.png">
+    <link rel="stylesheet" href="https://www.rapidochat.com/css/style.min.css">
+    <script defer src="https://www.rapidochat.com/scripts/main.js"></script>
+    
+</head>
+<body>
+    <!-- Login Screen -->
+    <div class="login-container" id="loginScreen">
+        <h2>Welcome to Chat Room</h2>
+        <p class="public-room-text">Join public room with ID: "456"</p>
+        <form id="loginForm">
+            <div class="input-group">
+                <input type="text" id="username" placeholder="Enter username" required>
+            </div>
+            <div class="input-group">
+                <input type="text" id="roomId" placeholder="Enter room ID (or 456 for public chat)">
+            </div>
+            <div class="button-group">
+                <button type="submit">Join Room</button>
+                <button type="button" id="randomChat">Random Chat</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Chat Screen -->
+    <div class="chat-container" id="chatScreen" style="display: none;">
+        <div class="chat-header">
+            <h3 id="welcomeMessage"></h3>
+        </div>
+        <div class="messages" id="messages"></div>
+        <div class="input-area">
+            <input type="text" id="messageInput" placeholder="Type your message...">
+            <button id="sendMessage">Send</button>
+        </div>
+    </div>
+
+    <audio id="messageSound" src="message.mp3"></audio>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="client.js"></script>
+    <!-- ---website related--- -->
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "name": "RapidoChat",
+          "url": "https://www.rapidochat.com",
+          "description": "RapidoChat is a fast and secure online chat platform. Connect instantly with people worldwide!",
+          "author": {
+            "@type": "RapidoChat Team",
+            "name": "RapidoChat Team"
+          },
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://www.rapidochat.com/search?q={search_term}",
+            "query-input": "required name=search_term"
+          }
+        }
+    </script>
+
+        
+</body>
+</html>
